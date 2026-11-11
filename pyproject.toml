@@ -1,0 +1,25 @@
+[project]
+name = "airflow-plus-dbt-plus-soda-poc"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+authors = [
+    { name = "Franklin Marín", email = "franklin.e.marin@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "soda-core-postgres",
+]
+
+[project.scripts]
+airflow-plus-dbt-plus-soda-poc = "airflow_plus_dbt_plus_soda_poc:main"
+
+[build-system]
+requires = ["uv_build>=0.12.0,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+    "jupyterlab>=4.6.2",
+]
